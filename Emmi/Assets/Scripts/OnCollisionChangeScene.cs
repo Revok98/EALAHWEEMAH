@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OnCollisionChangeScene : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class OnCollisionChangeScene : MonoBehaviour
     {
         if(collision.gameObject.tag == target.tag)
         {
-            Application.LoadLevel(SceneToGo);
+            SceneManager.LoadScene(SceneToGo);
         }
     }
 }
