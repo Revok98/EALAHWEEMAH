@@ -10,7 +10,7 @@ public class DecreasingController : MonoBehaviour
     public float DeadUnder;
     void Start()
     {
-        CurrentVolume = new Vector3(2f, 2f, 2f);
+        CurrentVolume = new Vector3(1f, 1f, 1f);
         this.transform.localScale = CurrentVolume;
         Vect = new Vector3(PourcentageToDecrease, PourcentageToDecrease, PourcentageToDecrease);
 

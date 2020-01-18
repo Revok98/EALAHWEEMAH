@@ -7,11 +7,15 @@ using UnityEngine.SceneManagement;
 public class EnergyManager : MonoBehaviour
 {
     public Image Bar;
-    public Text texte;
+    public Text texte;  
     public DecreasingController volume;
     public int health;
     public int maxHealth;
     public int numberAbsorbed; //nombre de lumières absorbées : RIP :( Mric
+    public LightManager light;
+    public float lightHealthRatio;
+    public ParticlesManager part;
+    public float particlesHealthRatio;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +33,8 @@ public class EnergyManager : MonoBehaviour
     {
         Bar.fillAmount = PercentHealth();
         texte.text = health +"/"+maxHealth ;
+        UpdateLight();
+        UpdateParticles();
     }
 
     public float PercentHealth()
@@ -71,7 +77,17 @@ public class EnergyManager : MonoBehaviour
         volume.transform.localScale = volume.getVolume();
     }
 
-    public void IncreseMaxHealth(int amount)
+    private void UpdateLight()
+    {
+        light.UpdateRange(Mathf.FloorToInt(health * lightHealthRatio));
+    }
+
+    private void UpdateParticles()
+    {
+        part.UpdateRateOverTime(Mathf.FloorToInt(health * particlesHealthRatio));
+    }
+
+    public void IncreaseMaxHealth(int amount)
     {
         maxHealth += amount;
         health = maxHealth;
