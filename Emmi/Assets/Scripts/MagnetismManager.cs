@@ -8,25 +8,41 @@ public class MagnetismManager : MonoBehaviour
 {
     public Image Bar;
     public float Fill;
+    public int magnetism;
+    public int maxMagnetism;
+    public Text texte;
+
     // Start is called before the first frame update
     void Start()
     {
-        Fill = 0f;
+        maxMagnetism = 20;
+        magnetism = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Bar.fillAmount = Fill;
+        Bar.fillAmount = PercentMagnetism();
     }
 
-    public void UpdateAmount(float amount)
+    public float PercentMagnetism()
     {
-        Fill += amount;
+        return (float)magnetism / (float)maxMagnetism;
+    }
+    public void UpdateAmount(int amount)
+    {
+        if (magnetism + amount < maxMagnetism)
+        {
+            magnetism += amount;
+        }
+        else
+        {
+            magnetism = maxMagnetism;
+        }
     }
 
     public float GetValue()
     {
-        return Fill;
+        return magnetism;
     }
 }
