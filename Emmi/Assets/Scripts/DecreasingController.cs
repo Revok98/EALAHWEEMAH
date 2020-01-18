@@ -18,8 +18,6 @@ public class DecreasingController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CurrentVolume = CurrentVolume - Vect;
-        this.transform.localScale = CurrentVolume;
     }
 
     public bool isTooSmall() {
@@ -28,5 +26,19 @@ public class DecreasingController : MonoBehaviour
         }
 
         return false;
+    }
+
+    public Vector3 getVolume()
+    {
+        return CurrentVolume;
+    }
+    public void setVolume(Vector3 vect)
+    {
+        CurrentVolume = Vect;
+    }
+
+    public Vector3 getVect()
+    {
+        return Vect;
     }
 }
