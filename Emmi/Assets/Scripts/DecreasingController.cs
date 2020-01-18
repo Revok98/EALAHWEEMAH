@@ -10,7 +10,7 @@ public class DecreasingController : MonoBehaviour
     public float DeadUnder;
     void Start()
     {
-        CurrentVolume = new Vector3(2f, 2f, 2f);
+        CurrentVolume = new Vector3(1f, 1f, 1f);
         this.transform.localScale = CurrentVolume;
         Vect = new Vector3(PourcentageToDecrease, PourcentageToDecrease, PourcentageToDecrease);
 
@@ -19,6 +19,11 @@ public class DecreasingController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int h = EnergyManager.health;
+        int mh = EnergyManager.maxHealth;
+        int volume = h * 22000 / mh;
+        this.GetComponent<AudioLowPassFilter>().cutoffFrequency = volume;
+        Debug.Log(this.GetComponent<AudioLowPassFilter>().cutoffFrequency);
         //Debug.Log(CurrentVolume);
         //Debug.Log(Vect.x);
         //Debug.Log((CurrentVolume - Vect).x);
