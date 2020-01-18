@@ -66,7 +66,11 @@ Emmi/obj/
 
 Emmi/ProjectSettings/
 
+Emmi/Assets/Audio/
+
 Emmi/Assets/Scenes/EymericScene.unity.meta
+
+Emmi/Assets/Scenes/SampleScene.unity.meta
 
 Emmi/Assets/Scenes/TestScene.unity.meta
 
