@@ -59,6 +59,8 @@ public class EnergyManager : MonoBehaviour
             }
             else
             {
+                Scene scene = SceneManager.GetActiveScene();
+                Container.lastSceneName = scene.name;
                 SceneManager.LoadScene("GameOver");
                 yield return null;
             }
