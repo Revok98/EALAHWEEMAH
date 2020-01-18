@@ -57,3 +57,21 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+Emmi/Temp/
+
+Emmi/Library/
+
+Emmi/obj/
+
+Emmi/ProjectSettings/
+
+Emmi/Assets/Scenes/EymericScene.unity.meta
+
+Emmi/Assets/Scenes/TestScene.unity.meta
+
+Emmi/Assets/EnergyManager.cs.meta
+
+Emmi/Assets/Scripts.meta
+
+Emmi/Assets/Scripts/MagnetismManager.cs.meta

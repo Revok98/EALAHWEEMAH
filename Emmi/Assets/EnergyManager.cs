@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class MagnetismManager : MonoBehaviour
+public class EnergyManager : MonoBehaviour
 {
     public Image Bar;
     public float Fill;
