@@ -11,6 +11,8 @@ public class OnCollisionChangeScene : MonoBehaviour
     {
         if(collision.gameObject.tag == target.tag)
         {
+            Scene scene = SceneManager.GetActiveScene();
+            Container.lastSceneName = scene.name;
             SceneManager.LoadScene(SceneToGo);
         }
     }

@@ -10,6 +10,8 @@ public class OnCollisionEvil : MonoBehaviour
     {
         if (collider.tag == "Player")
         {
+            Scene scene = SceneManager.GetActiveScene();
+            Container.lastSceneName = scene.name;
             SceneManager.LoadScene("GameOver");
         }
     }

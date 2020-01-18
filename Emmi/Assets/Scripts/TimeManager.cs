@@ -22,6 +22,8 @@ public class TimeManager : MonoBehaviour
         texte.text = "Temps restant : " + (Mathf.Round(time * 10f) / 10f) + " secondes";
         if (time < 0)
         {
+            Scene scene = SceneManager.GetActiveScene();
+            Container.lastSceneName = scene.name;
             SceneManager.LoadScene("GameOver");
         }
     }
