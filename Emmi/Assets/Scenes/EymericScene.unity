@@ -1118,7 +1118,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 40.1, y: -3.3}
+  m_AnchoredPosition: {x: 40.100006, y: -3.300003}
   m_SizeDelta: {x: -28, y: 14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &791034467
@@ -1496,11 +1496,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 946818868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e575c9db20a1743439af9692b14aee2c, type: 3}
+  m_Script: {fileID: 11500000, guid: 06824c23ee2e1ea499eace0784b13049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ener: {fileID: 791034468}
-  BonusHealth: 10
 --- !u!135 &946818870
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2751,6 +2749,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bar: {fileID: 1851015143}
   Fill: 0
+  magnetism: 0
+  maxMagnetism: 0
 --- !u!114 &1921604211
 MonoBehaviour:
   m_ObjectHideFlags: 0

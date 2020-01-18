@@ -10,8 +10,7 @@ public class OnCollisionChargeMagnet : MonoBehaviour
     { 
         if (collider.tag == "Player" && Input.GetKey("space"))
         {
-            mag.UpdateAmount(0.03f);
-            
+            mag.UpdateAmount(1);
         }
     }
 }

@@ -13,13 +13,16 @@ public class EnergyManager : MonoBehaviour
     public int maxHealth;
     public int numberAbsorbed; //nombre de lumières absorbées : RIP :( Mric
 
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     void Start()
     {
         maxHealth = 20;
         health = maxHealth;
         Bar.fillAmount = 1f;
-        numberAbsorbed = 1;
+        numberAbsorbed = 0;
         StartCoroutine(LoseEnergy());
         volume.transform.localScale = volume.getVolume();
     }
@@ -44,7 +47,7 @@ public class EnergyManager : MonoBehaviour
             {
                 health --;
                 float percent = PercentHealth();
-                volume.setVolume(new Vector3(numberAbsorbed * percent, numberAbsorbed * percent, numberAbsorbed * percent));
+                volume.setVolume(new Vector3((1 + numberAbsorbed/4) * percent, (1 + numberAbsorbed/4) * percent, (1 + numberAbsorbed/4) * percent));
                 volume.transform.localScale = volume.getVolume();
                 yield return new WaitForSeconds(1);
             }
@@ -67,7 +70,7 @@ public class EnergyManager : MonoBehaviour
             health = maxHealth;
         }
         float percent = PercentHealth();
-        volume.setVolume(new Vector3(numberAbsorbed * percent, numberAbsorbed * percent, numberAbsorbed * percent));
+        volume.setVolume(new Vector3((1 + numberAbsorbed/4) * percent, (1 + numberAbsorbed/4) * percent, (1 + numberAbsorbed/4) * percent));
         volume.transform.localScale = volume.getVolume();
     }
 
@@ -76,7 +79,7 @@ public class EnergyManager : MonoBehaviour
         maxHealth += amount;
         health = maxHealth;
         numberAbsorbed++;
-        volume.setVolume(new Vector3(numberAbsorbed, numberAbsorbed, numberAbsorbed));
+        volume.setVolume(new Vector3((1 + numberAbsorbed/4), (1 + numberAbsorbed/4), (1 + numberAbsorbed/4)));
         volume.transform.localScale = volume.getVolume();
     }
 }

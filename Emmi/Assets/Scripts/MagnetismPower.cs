@@ -5,7 +5,7 @@ using UnityEngine;
 public class MagnetismPower : MonoBehaviour
 {
     public MagnetismManager mag;
-    public float decrement;
+    public int decrement;
     private bool canMagnet;
     private RaycastHit hit;
     private void Start()
