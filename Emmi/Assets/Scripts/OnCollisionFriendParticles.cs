@@ -5,12 +5,14 @@ using UnityEngine;
 public class OnCollisionFriendParticles : MonoBehaviour
 {
     public EnergyManager ener;
+    public int Heal;
 
     void OnTriggerEnter(Collider collider)
     {
         if (collider.tag == "Player")
         {
-            ener.UpdateAmount(0.5f);
+            ener.UpdateAmount(Heal);
+            Destroy(this);
         }
     }
 }

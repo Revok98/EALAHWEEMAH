@@ -7,13 +7,19 @@ using UnityEngine.SceneManagement;
 public class EnergyManager : MonoBehaviour
 {
     public Image Bar;
-    public float Fill;
+    public Text texte;
     public DecreasingController volume;
+    public int health;
+    public int maxHealth;
+    public int numberAbsorbed; //nombre de lumières absorbées : RIP :( Mric
 
     // Start is called before the first frame update
     void Start()
     {
-        Fill = 1f;
+        maxHealth = 20;
+        health = maxHealth;
+        Bar.fillAmount = 1f;
+        numberAbsorbed = 1;
         StartCoroutine(LoseEnergy());
         volume.transform.localScale = volume.getVolume();
     }
@@ -21,17 +27,24 @@ public class EnergyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Bar.fillAmount = Fill;
+        Bar.fillAmount = PercentHealth();
+        texte.text = health +"/"+maxHealth ;
+    }
+
+    public float PercentHealth()
+    {
+        return (float)health / (float)maxHealth;
     }
 
     IEnumerator LoseEnergy()
     {
         while (true)
         { 
-            if (Fill > 0)
+            if (health > 0)
             {
-                Fill -= volume.PercentToDecrease();
-                volume.setVolume(volume.getVolume() - volume.getVect());
+                health --;
+                float percent = PercentHealth();
+                volume.setVolume(new Vector3(numberAbsorbed * percent, numberAbsorbed * percent, numberAbsorbed * percent));
                 volume.transform.localScale = volume.getVolume();
                 yield return new WaitForSeconds(1);
             }
@@ -43,9 +56,28 @@ public class EnergyManager : MonoBehaviour
         }
     }
 
-    public void UpdateAmount(float amount)
+    public void UpdateAmount(int amount)
     {
-        Fill += amount;
+        if (health + amount < maxHealth)
+        {
+            health = health + amount;
+        }
+        else
+        {
+            health = maxHealth;
+        }
+        float percent = PercentHealth();
+        volume.setVolume(new Vector3(numberAbsorbed * percent, numberAbsorbed * percent, numberAbsorbed * percent));
+        volume.transform.localScale = volume.getVolume();
+    }
+
+    public void IncreseMaxHealth(int amount)
+    {
+        maxHealth += amount;
+        health = maxHealth;
+        numberAbsorbed++;
+        volume.setVolume(new Vector3(numberAbsorbed, numberAbsorbed, numberAbsorbed));
+        volume.transform.localScale = volume.getVolume();
     }
 }
 
