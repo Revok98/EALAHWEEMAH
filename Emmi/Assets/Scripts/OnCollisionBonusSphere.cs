@@ -12,7 +12,7 @@ public class OnCollisionBonusSphere : MonoBehaviour
         if (collider.tag == "Player")
         {
             ener.IncreseMaxHealth(BonusHealth);
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }

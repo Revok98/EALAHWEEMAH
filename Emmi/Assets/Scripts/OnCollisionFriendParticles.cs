@@ -12,7 +12,7 @@ public class OnCollisionFriendParticles : MonoBehaviour
         if (collider.tag == "Player")
         {
             ener.UpdateAmount(Heal);
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }
