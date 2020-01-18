@@ -18,6 +18,10 @@ public class MagnetismManager : MonoBehaviour
         maxMagnetism = 20;
         magnetism = 0;
     }
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     // Update is called once per frame
     void Update()

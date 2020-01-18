@@ -13,7 +13,10 @@ public class EnergyManager : MonoBehaviour
     public int maxHealth;
     public int numberAbsorbed; //nombre de lumières absorbées : RIP :( Mric
 
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     void Start()
     {
         maxHealth = 20;
