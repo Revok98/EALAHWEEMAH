@@ -19,6 +19,11 @@ public class DecreasingController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int h = EnergyManager.health;
+        int mh = EnergyManager.maxHealth;
+        int volume = h * 22000 / mh;
+        this.GetComponent<AudioLowPassFilter>().cutoffFrequency = volume;
+        Debug.Log(this.GetComponent<AudioLowPassFilter>().cutoffFrequency);
         //Debug.Log(CurrentVolume);
         //Debug.Log(Vect.x);
         //Debug.Log((CurrentVolume - Vect).x);

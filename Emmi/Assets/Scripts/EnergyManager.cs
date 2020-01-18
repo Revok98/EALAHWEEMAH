@@ -9,8 +9,8 @@ public class EnergyManager : MonoBehaviour
     public Image Bar;
     public Text texte;
     public DecreasingController volume;
-    public int health;
-    public int maxHealth;
+    public static int health;
+    public static int maxHealth;
     public int numberAbsorbed; //nombre de lumières absorbées : RIP :( Mric
 
     private void Awake()
