@@ -16,6 +16,7 @@ public class Movement : MonoBehaviour
     public float amplitude;
     private bool mont;
     private int mult = 1;
+    public bool IsActiveMoving = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,13 +27,20 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        if (IsActiveMoving)
+        {
+            float h = Input.GetAxis("Horizontal");
+            float v = Input.GetAxis("Vertical");
+            Move(h, v);
+        }
+        else
+        {
 
-        Move(h, v);
+        }
+
     }
 
-    void Move(float h, float v) {
+    public void Move(float h, float v) {
         movement.Set(h, 0f, v);
         RaycastHit hit;
         // Does the ray intersect any objects excluding the player layer
@@ -91,7 +99,6 @@ public class Movement : MonoBehaviour
         }
         if (hit.distance <= levitationHeight - amplitude / 2)
         {
-            Debug.Log(hit.distance);
             playerAscencion = true;
             descending = false;
             mult = 5;

@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class MagnetismManager : MonoBehaviour
 {
     public Image Bar;
-    public float Fill;
     public int magnetism;
     public int maxMagnetism;
     public Text texte;
@@ -27,6 +26,7 @@ public class MagnetismManager : MonoBehaviour
     void Update()
     {
         Bar.fillAmount = PercentMagnetism();
+        texte.text = magnetism + "/" + maxMagnetism;
     }
 
     public float PercentMagnetism()
