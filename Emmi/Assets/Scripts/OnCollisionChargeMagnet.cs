@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
 
 public class OnCollisionChargeMagnet : MonoBehaviour
 {
@@ -17,10 +16,14 @@ public class OnCollisionChargeMagnet : MonoBehaviour
         {
             player.gameObject.transform.RotateAround(transform.position, Vector3.up, 90f * Time.deltaTime);
             nbiter++;
-            Debug.Log(startPosRotate - Vector2.Angle(transform.position, player.transform.position));
+            if (nbiter % 45 == 0)
+            {
+                mag.UpdateAmount(1);
+            }
             if(nbiter > 450)
             {
                 player.IsActiveMoving = true;
+                Destroy(gameObject);
             }
         }
     }
@@ -32,7 +35,6 @@ public class OnCollisionChargeMagnet : MonoBehaviour
         if (collider.tag == "Player" && Input.GetKey("space"))
         {
             player.IsActiveMoving = false;
-            mag.UpdateAmount(1);
             startPosRotate = Vector3.Angle(transform.position,collider.transform.position);
 
         }

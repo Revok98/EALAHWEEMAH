@@ -12,7 +12,7 @@ public class EnergyManager : MonoBehaviour
     public static int health;
     public static int maxHealth;
     public int numberAbsorbed; //nombre de lumières absorbées : RIP :( Mric
-    public LightManager light;
+    public LightManager lights;
     public float lightHealthRatio;
     public ParticlesManager part;
     public float particlesHealthRatio;
@@ -82,7 +82,7 @@ public class EnergyManager : MonoBehaviour
 
     private void UpdateLight()
     {
-        light.UpdateRange(Mathf.FloorToInt(health * lightHealthRatio));
+        lights.UpdateRange(Mathf.FloorToInt(health * lightHealthRatio));
     }
 
     private void UpdateParticles()
