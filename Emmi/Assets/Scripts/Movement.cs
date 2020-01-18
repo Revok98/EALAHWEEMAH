@@ -91,7 +91,7 @@ public class Movement : MonoBehaviour
         }
         if (hit.distance <= levitationHeight - amplitude / 2)
         {
-            Debug.Log(hit.distance);
+            //Debug.Log(hit.distance);
             playerAscencion = true;
             descending = false;
             mult = 5;

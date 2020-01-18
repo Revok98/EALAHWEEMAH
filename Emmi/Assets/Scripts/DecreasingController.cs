@@ -6,6 +6,7 @@ public class DecreasingController : MonoBehaviour
 {
     public Vector3 CurrentVolume;
     public float PourcentageToDecrease;
+    public GameObject Orb;
     Vector3 Vect;
     public float DeadUnder;
     void Start()
@@ -23,7 +24,8 @@ public class DecreasingController : MonoBehaviour
         int mh = EnergyManager.maxHealth;
         int volume = h * 22000 / mh;
         this.GetComponent<AudioLowPassFilter>().cutoffFrequency = volume;
-        Debug.Log(this.GetComponent<AudioLowPassFilter>().cutoffFrequency);
+        Orb.transform.localScale = CurrentVolume;
+        //Debug.Log(this.GetComponent<AudioLowPassFilter>().cutoffFrequency);
         //Debug.Log(CurrentVolume);
         //Debug.Log(Vect.x);
         //Debug.Log((CurrentVolume - Vect).x);
