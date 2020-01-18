@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class DecreasingController : MonoBehaviour
 {
-    Vector3 CurrentVolume;
+    public Vector3 CurrentVolume;
     public float PourcentageToDecrease;
     Vector3 Vect;
     public float DeadUnder;
-    // Start is called before the first frame update
     void Start()
     {
-        CurrentVolume = this.transform.localScale;
-        Vect = new Vector3(PourcentageToDecrease, PourcentageToDecrease, PourcentageToDecrease); 
+        CurrentVolume = new Vector3(2f, 2f, 2f);
+        this.transform.localScale = CurrentVolume;
+        Vect = new Vector3(PourcentageToDecrease, PourcentageToDecrease, PourcentageToDecrease);
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(CurrentVolume);
+        //Debug.Log(Vect.x);
+        //Debug.Log((CurrentVolume - Vect).x);
     }
 
     public bool isTooSmall() {
@@ -34,11 +38,16 @@ public class DecreasingController : MonoBehaviour
     }
     public void setVolume(Vector3 vect)
     {
-        CurrentVolume = Vect;
+        CurrentVolume = vect;
     }
 
     public Vector3 getVect()
     {
         return Vect;
+    }
+
+    public float PercentToDecrease()
+    {
+        return PourcentageToDecrease;
     }
 }
