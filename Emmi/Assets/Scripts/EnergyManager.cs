@@ -23,6 +23,7 @@ public class EnergyManager : MonoBehaviour
     {
         Bar.fillAmount = Fill;
     }
+
     IEnumerator LoseEnergy()
     {
         while (true)
@@ -40,6 +41,11 @@ public class EnergyManager : MonoBehaviour
                 yield return null;
             }
         }
+    }
+
+    public void UpdateAmount(float amount)
+    {
+        Fill += amount;
     }
 }
 
