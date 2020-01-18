@@ -19,8 +19,14 @@ public class MagnetismManager : MonoBehaviour
     {
         Bar.fillAmount = Fill;
     }
+
     public void UpdateAmount(float amount)
     {
         Fill += amount;
+    }
+
+    public float GetValue()
+    {
+        return Fill;
     }
 }
