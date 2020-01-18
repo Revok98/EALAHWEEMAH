@@ -11,13 +11,16 @@ public class MagnetismManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Fill = 1f;
+        Fill = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
         Bar.fillAmount = Fill;
-        Fill = Fill - 0.01f;
+    }
+    public void UpdateAmount(float amount)
+    {
+        Fill += amount;
     }
 }
