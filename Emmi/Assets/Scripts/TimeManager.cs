@@ -13,6 +13,7 @@ public class TimeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+            time = Container.time;
     }
 
     // Update is called once per frame
@@ -25,6 +26,7 @@ public class TimeManager : MonoBehaviour
             texte.text = "Temps restant : " + (Mathf.Round(time * 10f) / 10f) + " secondes";
             if (time < 0)
             {
+                Debug.Log("b");
                 Scene scene = SceneManager.GetActiveScene();
                 Container.lastSceneName = scene.name;
                 SceneManager.LoadScene("GameOver");

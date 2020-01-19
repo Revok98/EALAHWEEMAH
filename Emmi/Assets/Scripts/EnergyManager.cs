@@ -15,14 +15,15 @@ public class EnergyManager : MonoBehaviour
     public ParticlesManager part;
     public float particlesHealthRatio;
     public int LoseHealth;
+    private object health;
 
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
     void Start()
     {
-        Container.maxHealth = 20;
+        Container.maxHealth = 100;
         Container.health = Container.maxHealth;
         Bar.fillAmount = 1f;
         numberAbsorbed = 0;
@@ -50,7 +51,7 @@ public class EnergyManager : MonoBehaviour
         { 
             if (Container.health > 0)
             {
-                Container.health --;
+                Container.health -= LoseHealth;
                 float percent = PercentHealth();
                 if(volume != null)
                 {
