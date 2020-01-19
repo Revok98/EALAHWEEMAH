@@ -7,15 +7,13 @@ using UnityEngine.UI;
 public class MagnetismManager : MonoBehaviour
 {
     public Image Bar;
-    public int magnetism;
-    public int maxMagnetism;
     public Text texte;
 
     // Start is called before the first frame update
     void Start()
     {
-        maxMagnetism = 20;
-        magnetism = 0;
+        Container.maxMagnetism = 20;
+        Container.magnetism = 0;
     }
     private void Awake()
     {
@@ -26,27 +24,27 @@ public class MagnetismManager : MonoBehaviour
     void Update()
     {
         Bar.fillAmount = PercentMagnetism();
-        texte.text = magnetism + "/" + maxMagnetism;
+        texte.text = Container.magnetism + "/" + Container.maxMagnetism;
     }
 
     public float PercentMagnetism()
     {
-        return (float)magnetism / (float)maxMagnetism;
+        return (float)Container.magnetism / (float)Container.maxMagnetism;
     }
     public void UpdateAmount(int amount)
     {
-        if (magnetism + amount < maxMagnetism)
+        if (Container.magnetism + amount < Container.maxMagnetism)
         {
-            magnetism += amount;
+            Container.magnetism += amount;
         }
         else
         {
-            magnetism = maxMagnetism;
+            Container.magnetism = Container.maxMagnetism;
         }
     }
 
     public float GetValue()
     {
-        return magnetism;
+        return Container.magnetism;
     }
 }
