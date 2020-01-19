@@ -1577,6 +1577,7 @@ GameObject:
   - component: {fileID: 946818871}
   - component: {fileID: 946818870}
   - component: {fileID: 946818869}
+  - component: {fileID: 946818875}
   m_Layer: 0
   m_Name: EvilSphere
   m_TagString: Untagged
@@ -1683,6 +1684,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &946818875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946818868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e49b79baf737e74d97601516f584626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circleRadius: 20
+  speed: 5
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2735,6 +2750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentVolume: {x: 2, y: 2, z: 2}
   PourcentageToDecrease: 0.01
+  Orb: {fileID: 0}
   DeadUnder: 0.2
 --- !u!114 &1747991512
 MonoBehaviour:
