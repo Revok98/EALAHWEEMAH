@@ -20,8 +20,8 @@ public class DecreasingController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int h = EnergyManager.health;
-        int mh = EnergyManager.maxHealth;
+        int h = Container.health;
+        int mh = Container.maxHealth;
         int volume = h * 22000 / mh;
         this.GetComponent<AudioLowPassFilter>().cutoffFrequency = volume;
         Orb.transform.localScale = CurrentVolume;

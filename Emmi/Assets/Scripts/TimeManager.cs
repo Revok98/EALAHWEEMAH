@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class TimeManager : MonoBehaviour
 {
-    public float time;
+    public float time = 300f;
     public Text texte;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        time = 300f;
     }
 
     // Update is called once per frame

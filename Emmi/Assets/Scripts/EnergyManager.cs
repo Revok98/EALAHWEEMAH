@@ -9,8 +9,6 @@ public class EnergyManager : MonoBehaviour
     public Image Bar;
     public Text texte;  
     public DecreasingController volume;
-    public static int health;
-    public static int maxHealth;
     public int numberAbsorbed; //nombre de lumières absorbées : RIP :( Mric
     public LightManager lights;
     public float lightHealthRatio;
@@ -23,8 +21,8 @@ public class EnergyManager : MonoBehaviour
     }
     void Start()
     {
-        maxHealth = 20;
-        health = maxHealth;
+        Container.maxHealth = 20;
+        Container.health = Container.maxHealth;
         Bar.fillAmount = 1f;
         numberAbsorbed = 0;
         StartCoroutine(LoseEnergy());
@@ -35,23 +33,23 @@ public class EnergyManager : MonoBehaviour
     void Update()
     {
         Bar.fillAmount = PercentHealth();
-        texte.text = health +"/"+maxHealth ;
+        texte.text = Container.health +"/"+Container.maxHealth ;
         UpdateLight();
         UpdateParticles();
     }
 
     public float PercentHealth()
     {
-        return (float)health / (float)maxHealth;
+        return (float)Container.health / (float)Container.maxHealth;
     }
 
     IEnumerator LoseEnergy()
     {
         while (true)
         { 
-            if (health > 0)
+            if (Container.health > 0)
             {
-                health --;
+                Container.health --;
                 float percent = PercentHealth();
                 if(volume != null)
                 {
@@ -73,13 +71,13 @@ public class EnergyManager : MonoBehaviour
 
     public void UpdateAmount(int amount)
     {
-        if (health + amount < maxHealth)
+        if (Container.health + amount < Container.maxHealth)
         {
-            health = health + amount;
+            Container.health = Container.health + amount;
         }
         else
         {
-            health = maxHealth;
+            Container.health = Container.maxHealth;
         }
         float percent = PercentHealth();
         volume.setVolume(new Vector3((1 + numberAbsorbed/4) * percent, (1 + numberAbsorbed/4) * percent, (1 + numberAbsorbed/4) * percent));
@@ -90,7 +88,7 @@ public class EnergyManager : MonoBehaviour
     {
         if(lights != null)
         {
-            lights.UpdateRange(Mathf.FloorToInt(health * lightHealthRatio));
+            lights.UpdateRange(Mathf.FloorToInt(Container.health * lightHealthRatio));
         }
     }
 
@@ -98,14 +96,14 @@ public class EnergyManager : MonoBehaviour
     {
         if(part != null)
         {
-            part.UpdateRateOverTime(Mathf.FloorToInt(health * particlesHealthRatio));
+            part.UpdateRateOverTime(Mathf.FloorToInt(Container.health * particlesHealthRatio));
         }
     }
 
     public void IncreaseMaxHealth(int amount)
     {
-        maxHealth += amount;
-        health = maxHealth;
+        Container.maxHealth += amount;
+        Container.health = Container.maxHealth;
         numberAbsorbed++;
         volume.setVolume(new Vector3((1 + numberAbsorbed/4), (1 + numberAbsorbed/4), (1 + numberAbsorbed/4)));
         volume.transform.localScale = volume.getVolume();
