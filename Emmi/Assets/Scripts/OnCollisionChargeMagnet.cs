@@ -32,7 +32,7 @@ public class OnCollisionChargeMagnet : MonoBehaviour
 
     void OnTriggerStay(Collider collider)
     { 
-        if (collider.tag == "Player" && Input.GetKey("space"))
+        if (collider.tag == "Player" && Input.GetMouseButton(1))
         {
             player.IsActiveMoving = false;
             startPosRotate = Vector3.Angle(transform.position,collider.transform.position);
