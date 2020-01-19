@@ -6,5 +6,5 @@ public static class Container
 {
     public static float time;
     public static string lastSceneName;
-
+    public static bool timerStop = false;
 }
