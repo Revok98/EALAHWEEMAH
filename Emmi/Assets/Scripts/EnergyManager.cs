@@ -14,6 +14,7 @@ public class EnergyManager : MonoBehaviour
     public float lightHealthRatio;
     public ParticlesManager part;
     public float particlesHealthRatio;
+    public int LoseHealth;
 
     private void Awake()
     {
