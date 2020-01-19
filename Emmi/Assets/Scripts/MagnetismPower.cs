@@ -24,6 +24,7 @@ public class MagnetismPower : MonoBehaviour
                 {
                     if (mag.GetValue() > 0) 
                     {
+                        mag.UpdateAmount(-decrement);
                         canMagnet = true;
                     }
                 }
@@ -36,7 +37,6 @@ public class MagnetismPower : MonoBehaviour
         }
         if (canMagnet)
         {
-            mag.UpdateAmount(-decrement);
             hit.collider.gameObject.GetComponent<MagnetismEffect>().effect(this.transform);
         }
     }
