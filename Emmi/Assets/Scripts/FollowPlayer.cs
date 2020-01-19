@@ -18,7 +18,7 @@ public class FollowPlayer : MonoBehaviour
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         Vector3 diff = player.GetComponent<Rigidbody>().transform.position - truePosition;
-        if (Mathf.Pow(diff.x,2) + Mathf.Pow(diff.y,2) <= circleRadius) {
+        if (Mathf.Pow(diff.x,2) + Mathf.Pow(diff.z,2) <= circleRadius) {
             Move();
         }
     }
