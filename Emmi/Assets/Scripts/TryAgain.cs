@@ -22,7 +22,8 @@ public class TryAgain : MonoBehaviour
         /**/
     }
 
-    void TaskOnClick()
+
+    public void TaskOnClick()
     {
         if (Container.time <= 1)
         {
