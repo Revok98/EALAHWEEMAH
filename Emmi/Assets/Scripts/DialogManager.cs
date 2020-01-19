@@ -23,6 +23,7 @@ public class DialogManager : MonoBehaviour {
 
     public Text m_renderText;
     private List<DialogPage> m_dialogToDisplay;
+    private bool removetext;
 
     void Awake () {
 
@@ -39,13 +40,13 @@ public class DialogManager : MonoBehaviour {
             {
                m_renderText.text = "";
             }
-
             this.gameObject.SetActive(true);
         }
     }
 	
 	// Update is called once per frame
 	void Update () {
+
         if (m_renderText == null)
         {
             this.gameObject.SetActive(false);
@@ -54,15 +55,19 @@ public class DialogManager : MonoBehaviour {
         // Displays the current page
 		if (m_dialogToDisplay.Count > 0)
         {
+            removetext = true;
             m_renderText.text = m_dialogToDisplay[0].text;
         } else
         {
+
+            Container.timerStop = false;
             this.gameObject.SetActive(false);
         }
 
         // Remoeves the page when the player presses "space"
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.anyKey && removetext)
         {
+            removetext = false;
             m_dialogToDisplay.RemoveAt(0);
         }
 	}

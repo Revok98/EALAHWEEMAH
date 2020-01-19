@@ -19,7 +19,7 @@ public class OnCollisionChargeMagnet : MonoBehaviour
             nbiter++;
             if (nbiter % 45 == 0)
             {
-                mag.UpdateAmount(1);
+                mag.UpdateAmount(2);
             }
             if(nbiter > 225)
             {

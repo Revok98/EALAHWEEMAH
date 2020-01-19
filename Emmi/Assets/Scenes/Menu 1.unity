@@ -292,7 +292,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: facb922e3912842448c9aed3ca04ccad, type: 3}
+    m_Font: {fileID: 12800000, guid: fd68b2d0a27626e449809feb0ad28e44, type: 3}
     m_FontSize: 32
     m_FontStyle: 3
     m_BestFit: 0
@@ -594,7 +594,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: facb922e3912842448c9aed3ca04ccad, type: 3}
+    m_Font: {fileID: 12800000, guid: fd68b2d0a27626e449809feb0ad28e44, type: 3}
     m_FontSize: 56
     m_FontStyle: 1
     m_BestFit: 0
@@ -671,7 +671,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: facb922e3912842448c9aed3ca04ccad, type: 3}
+    m_Font: {fileID: 12800000, guid: fd68b2d0a27626e449809feb0ad28e44, type: 3}
     m_FontSize: 56
     m_FontStyle: 1
     m_BestFit: 0
@@ -816,8 +816,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sun Gone
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cb03cc1e3b81566489ec91556b2aaaa7, type: 2}
-  m_sharedMaterial: {fileID: -1582336192836526648, guid: cb03cc1e3b81566489ec91556b2aaaa7,
+  m_fontAsset: {fileID: 11400000, guid: 2279c493e2a480147be898a205794691, type: 2}
+  m_sharedMaterial: {fileID: -1582336192836526648, guid: 2279c493e2a480147be898a205794691,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1074,7 +1074,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1255040479}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 968b342e014724948ad95f61dc2f8502, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a798b4299afda348968765480b1e369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   initial_scene: InitialScene
@@ -1219,11 +1219,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1291492525}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 968b342e014724948ad95f61dc2f8502, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a798b4299afda348968765480b1e369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   initial_scene: InitialScene
-  control_scene: ControlScene
+  control_scene: Menu
 --- !u!1 &1355492359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,7 +1584,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1605082368}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 968b342e014724948ad95f61dc2f8502, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a798b4299afda348968765480b1e369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   initial_scene: InitialScene
@@ -1801,7 +1801,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: facb922e3912842448c9aed3ca04ccad, type: 3}
+    m_Font: {fileID: 12800000, guid: fd68b2d0a27626e449809feb0ad28e44, type: 3}
     m_FontSize: 56
     m_FontStyle: 1
     m_BestFit: 0
@@ -1951,7 +1951,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: facb922e3912842448c9aed3ca04ccad, type: 3}
+    m_Font: {fileID: 12800000, guid: fd68b2d0a27626e449809feb0ad28e44, type: 3}
     m_FontSize: 34
     m_FontStyle: 3
     m_BestFit: 0
@@ -2258,7 +2258,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: facb922e3912842448c9aed3ca04ccad, type: 3}
+    m_Font: {fileID: 12800000, guid: fd68b2d0a27626e449809feb0ad28e44, type: 3}
     m_FontSize: 32
     m_FontStyle: 3
     m_BestFit: 0
