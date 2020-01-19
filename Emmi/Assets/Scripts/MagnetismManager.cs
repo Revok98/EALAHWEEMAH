@@ -17,7 +17,7 @@ public class MagnetismManager : MonoBehaviour
     }
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
