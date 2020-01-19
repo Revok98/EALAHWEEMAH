@@ -8,19 +8,20 @@ public class OnCollisionChargeMagnet : MonoBehaviour
     public Movement player;
     private float startPosRotate;
     private int nbiter = 0;
-
+    float speed = 180f;
 
     private void Update()
     {
         if (!player.IsActiveMoving)
         {
-            player.gameObject.transform.RotateAround(transform.position, Vector3.up, 90f * Time.deltaTime);
+
+            player.gameObject.transform.RotateAround(transform.position, Vector3.up, speed * Time.deltaTime);
             nbiter++;
             if (nbiter % 45 == 0)
             {
                 mag.UpdateAmount(1);
             }
-            if(nbiter > 450)
+            if(nbiter > 225)
             {
                 player.IsActiveMoving = true;
                 Destroy(gameObject);

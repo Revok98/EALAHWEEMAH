@@ -53,8 +53,12 @@ public class EnergyManager : MonoBehaviour
             {
                 health --;
                 float percent = PercentHealth();
-                volume.setVolume(new Vector3((1 + numberAbsorbed/4) * percent, (1 + numberAbsorbed/4) * percent, (1 + numberAbsorbed/4) * percent));
-                volume.transform.localScale = volume.getVolume();
+                if(volume != null)
+                {
+                    volume.setVolume(new Vector3((1 + numberAbsorbed / 4) * percent, (1 + numberAbsorbed / 4) * percent, (1 + numberAbsorbed / 4) * percent));
+                    volume.transform.localScale = volume.getVolume();
+                }
+
                 yield return new WaitForSeconds(1);
             }
             else
@@ -84,12 +88,18 @@ public class EnergyManager : MonoBehaviour
 
     private void UpdateLight()
     {
-        lights.UpdateRange(Mathf.FloorToInt(health * lightHealthRatio));
+        if(lights != null)
+        {
+            lights.UpdateRange(Mathf.FloorToInt(health * lightHealthRatio));
+        }
     }
 
     private void UpdateParticles()
     {
-        part.UpdateRateOverTime(Mathf.FloorToInt(health * particlesHealthRatio));
+        if(part != null)
+        {
+            part.UpdateRateOverTime(Mathf.FloorToInt(health * particlesHealthRatio));
+        }
     }
 
     public void IncreaseMaxHealth(int amount)
