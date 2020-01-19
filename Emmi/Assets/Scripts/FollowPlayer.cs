@@ -6,7 +6,7 @@ public class FollowPlayer : MonoBehaviour
 {
     public int circleRadius;
     Vector3 truePosition;
-    public int speed;
+    public float speed;
     // Start is called before the first frame update
     void Start()
     {
