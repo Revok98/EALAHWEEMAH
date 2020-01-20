@@ -10,7 +10,6 @@ public class OnCollisionEvil : MonoBehaviour
     {
         if (collider.tag == "Player")
         {
-            Destroy(GameObject.FindGameObjectWithTag("Energy Bar"));
             Scene scene = SceneManager.GetActiveScene();
             Container.lastSceneName = scene.name;
             SceneManager.LoadScene("GameOver");

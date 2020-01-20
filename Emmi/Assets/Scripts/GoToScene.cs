@@ -22,6 +22,7 @@ public class GoToScene : MonoBehaviour
         SceneManager.LoadScene(control_scene);
     }
     public void Stop() {
-        UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
+        //  UnityEditor.EditorApplication.isPlaying = false;
     }
 }

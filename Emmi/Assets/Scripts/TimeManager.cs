@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class TimeManager : MonoBehaviour
 {
-    public float time = 300f;
+    public float time;
     public Text texte;
 
 
