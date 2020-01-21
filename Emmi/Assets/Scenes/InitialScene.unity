@@ -5753,7 +5753,7 @@ Transform:
   m_LocalScale: {x: 2.6315994, y: 2.6316, z: 7.594533}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 179.699, z: 0}
 --- !u!1 &201360868
 GameObject:
@@ -14932,7 +14932,7 @@ RectTransform:
   m_Children:
   - {fileID: 210926169}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -20157,7 +20157,7 @@ Transform:
   m_LocalScale: {x: 1.826602, y: 1.8266, z: 1.826602}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 132.263, z: 0}
 --- !u!1001 &786181977
 PrefabInstance:
@@ -23685,9 +23685,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: afa1c7727ec3b7b479cc0c7ab6910290, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8ac7ef9c1ab0e414f9881913b0c2cc6a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -23778,12 +23778,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999680723}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.1163054, y: -3.5106325, z: 30.58317}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -18.096306, y: -10.610632, z: 30.92317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1688783087}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1024366105
 GameObject:
@@ -28297,7 +28297,7 @@ Transform:
   m_LocalScale: {x: 1.8266002, y: 1.8266, z: 6.1192107}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 89.26501, z: 0}
 --- !u!43 &1539714008
 Mesh:
@@ -32420,7 +32420,7 @@ Transform:
   m_LocalScale: {x: 1.8266, y: 1.8266, z: 6.11921}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: -45.964, z: 0}
 --- !u!1 &1679448949
 GameObject:
@@ -32771,7 +32771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_dialogWithPlayer:
   - text: "... : Cela fait maintenant 1 mois que le soleil a disparu. Je sens mon
-      energie vitale s'amenuiser. Je dois leretrouver pour ramener la vie sur Terre
+      energie vitale s'amenuiser. Je dois le retrouver pour ramener la vie sur Terre
       et sauver les autres \xE9tincelles."
     color: {r: 0, g: 0, b: 0, a: 0}
   m_dialogDisplayer: {fileID: 210926166}
@@ -33804,7 +33804,7 @@ Transform:
   m_LocalScale: {x: 1.8265997, y: 1.8266, z: 6.1192117}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: -1.5070001, z: 0}
 --- !u!1 &1735942645
 GameObject:
@@ -34817,7 +34817,7 @@ Transform:
   m_LocalScale: {x: 1.8266, y: 1.8266, z: 6.11921}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: -135.77701, z: 0}
 --- !u!43 &1780463520
 Mesh:
@@ -36806,7 +36806,7 @@ Transform:
   m_LocalScale: {x: 1.8266, y: 1.8266, z: 6.11921}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: -92.011, z: 0}
 --- !u!1001 &1867142053
 PrefabInstance:
@@ -46199,7 +46199,7 @@ Transform:
   m_LocalScale: {x: 1.8266, y: 1.8266, z: 6.119212}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 43.091003, z: 0}
 --- !u!1001 &2044456435877375547
 PrefabInstance:
@@ -47025,6 +47025,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361162885758986515, guid: d7e28a61d772ab049ba0158f7699dcda,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7d53270d41463cd4dad5fd396a9ff4cb, type: 3}
+    - target: {fileID: 4361162885758986515, guid: d7e28a61d772ab049ba0158f7699dcda,
+        type: 3}
+      propertyPath: Loop
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4361162885758986517, guid: d7e28a61d772ab049ba0158f7699dcda,
         type: 3}
