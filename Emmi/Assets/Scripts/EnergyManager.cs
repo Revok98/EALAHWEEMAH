@@ -51,7 +51,10 @@ public class EnergyManager : MonoBehaviour
         { 
             if (Container.health > 0)
             {
-                Container.health -= LoseHealth;
+                if (!Container.timerStop)
+                {
+                    Container.health -= LoseHealth;
+                }
                 float percent = PercentHealth();
                 if(volume != null)
                 {
@@ -64,10 +67,7 @@ public class EnergyManager : MonoBehaviour
             else
             {
                 Scene scene = SceneManager.GetActiveScene();
-                if (GameObject.FindGameObjectWithTag("Energy Bar") != null)
-                {
-                    Destroy(GameObject.FindGameObjectWithTag("Energy Bar"));
-                }
+                Destroy(GameObject.FindGameObjectWithTag("Energy Bar"));
                 Container.lastSceneName = scene.name;
                 SceneManager.LoadScene("GameOver");
                 yield return null;
