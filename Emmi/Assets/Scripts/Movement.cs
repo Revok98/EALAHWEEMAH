@@ -41,8 +41,10 @@ public class Movement : MonoBehaviour
         {
             float h = Input.GetAxis("Horizontal");
             float v = Input.GetAxis("Vertical");
+            if (!playerRigidbody.useGravity) {
                 playerRigidbody.velocity = Vector3.zero;
                 playerRigidbody.angularVelocity = Vector3.zero;
+            }
             Move(h, v);
         }
     }
