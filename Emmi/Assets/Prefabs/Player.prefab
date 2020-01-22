@@ -310,7 +310,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5856178267907441608}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -66.57631, y: -10.610632, z: 39.07317}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4361162885758986517}
@@ -419,6 +419,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4361162885758986517}
     m_Modifications:
+    - target: {fileID: 3756193756564908797, guid: 88aa38eae6712344584d6d38dc2e590a,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3756193756601932582, guid: 88aa38eae6712344584d6d38dc2e590a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -478,6 +483,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: main sparkle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3756193756892190302, guid: 88aa38eae6712344584d6d38dc2e590a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3756193756892190302, guid: 88aa38eae6712344584d6d38dc2e590a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3756193756892190302, guid: 88aa38eae6712344584d6d38dc2e590a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3756193757298510891, guid: 88aa38eae6712344584d6d38dc2e590a,
         type: 3}

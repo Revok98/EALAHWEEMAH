@@ -13,6 +13,7 @@ public class DecreasingController : MonoBehaviour
     {
         CurrentVolume = new Vector3(1f, 1f, 1f);
         this.transform.localScale = CurrentVolume;
+        Orb.transform.localScale = 3 * CurrentVolume;
         Vect = new Vector3(PourcentageToDecrease, PourcentageToDecrease, PourcentageToDecrease);
 
     }
@@ -24,7 +25,7 @@ public class DecreasingController : MonoBehaviour
         int mh = Container.maxHealth;
         int volume = h * 22000 / mh;
         this.GetComponent<AudioLowPassFilter>().cutoffFrequency = volume;
-        Orb.transform.localScale = CurrentVolume;
+        Orb.transform.localScale = 3 * CurrentVolume;
         //Debug.Log(this.GetComponent<AudioLowPassFilter>().cutoffFrequency);
         //Debug.Log(CurrentVolume);
         //Debug.Log(Vect.x);
@@ -35,14 +36,15 @@ public class DecreasingController : MonoBehaviour
         if (CurrentVolume.x<= DeadUnder) {
             return true;
         }
-
         return false;
     }
+
 
     public Vector3 getVolume()
     {
         return CurrentVolume;
     }
+
     public void setVolume(Vector3 vect)
     {
         CurrentVolume = vect;
