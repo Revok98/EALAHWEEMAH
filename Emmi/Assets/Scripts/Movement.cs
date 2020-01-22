@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 // Code produit en partie par Unity et remodelé par Alexandre Rousseau. Réutilisation avec son aimable accord. 
 public class Movement : MonoBehaviour
 {
@@ -46,6 +47,10 @@ public class Movement : MonoBehaviour
                 playerRigidbody.angularVelocity = Vector3.zero;
             }
             Move(h, v);
+        }
+        if( transform.position.y <= -100)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
