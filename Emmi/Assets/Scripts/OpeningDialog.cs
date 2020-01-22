@@ -15,10 +15,11 @@ public class OpeningDialog : MonoBehaviour
 
     void Update()
     {
-        Container.timerStop = true;
+
 
         if (!alreadyTalk)
         {
+            Container.timerStop = true;
             m_dialogDisplayer.SetDialog(m_dialogWithPlayer);
             alreadyTalk = true;
         }

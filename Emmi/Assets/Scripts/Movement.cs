@@ -111,7 +111,6 @@ public class Movement : MonoBehaviour
         movement = Camera.main.transform.TransformDirection(movement).normalized;//Penser à changer en fonction de la position de la caméra 
         movement = movement * speed * Time.deltaTime;
         movement.y = toAdd;
-        Debug.Log(movement);
         if (hit.distance >= levitationHeight + amplitude / 2 && !descending)
         {
             mult = 5;
