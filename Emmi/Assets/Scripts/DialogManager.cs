@@ -40,6 +40,7 @@ public class DialogManager : MonoBehaviour {
             {
                m_renderText.text = "";
             }
+            Container.timerStop = false;
             this.gameObject.SetActive(true);
         }
     }
@@ -60,7 +61,6 @@ public class DialogManager : MonoBehaviour {
         } else
         {
 
-            Container.timerStop = false;
             this.gameObject.SetActive(false);
         }
 
