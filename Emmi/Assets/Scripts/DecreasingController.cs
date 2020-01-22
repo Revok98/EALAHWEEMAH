@@ -13,6 +13,7 @@ public class DecreasingController : MonoBehaviour
     {
         CurrentVolume = new Vector3(1f, 1f, 1f);
         this.transform.localScale = CurrentVolume;
+        Orb.transform.localScale = CurrentVolume;
         Vect = new Vector3(PourcentageToDecrease, PourcentageToDecrease, PourcentageToDecrease);
 
     }
@@ -35,14 +36,15 @@ public class DecreasingController : MonoBehaviour
         if (CurrentVolume.x<= DeadUnder) {
             return true;
         }
-
         return false;
     }
+
 
     public Vector3 getVolume()
     {
         return CurrentVolume;
     }
+
     public void setVolume(Vector3 vect)
     {
         CurrentVolume = vect;
