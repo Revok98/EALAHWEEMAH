@@ -20,8 +20,6 @@ public class Movement : MonoBehaviour
     public bool IsActiveMoving = true;
 
     public int maxVelocityChange = 10;
-    private Vector3 forward;
-    private Vector3 right;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,8 +38,13 @@ public class Movement : MonoBehaviour
     {
         if (IsActiveMoving)
         {
-            float h = Input.GetAxis("Horizontal");
-            float v = Input.GetAxis("Vertical");
+            float h = 0;
+            float v = 0;
+            if (!Container.isTalking)
+            {
+                h = Input.GetAxis("Horizontal");
+                v = Input.GetAxis("Vertical");
+            }
             if (!playerRigidbody.useGravity) {
                 playerRigidbody.velocity = Vector3.zero;
                 playerRigidbody.angularVelocity = Vector3.zero;
@@ -54,15 +57,7 @@ public class Movement : MonoBehaviour
         }
     }
 
-    public void Moving(float h, float v) {
-        movement = new Vector3(h, 0, v);
-        Vector3 rightm = right * speed * Time.deltaTime * h;
-        Vector3 forwardm = forward * speed * Time.deltaTime * v;
-        Vector3 heading = Vector3.Normalize(rightm + forwardm);
-        transform.forward = heading;
-        transform.position += rightm;
-        transform.position += forwardm;
-    }
+
 
     public void Move(float h, float v) {
         movement.Set(h, 0f, v);

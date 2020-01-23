@@ -11,4 +11,5 @@ public static class Container
     static public int maxHealth= 100;
     static public int magnetism = 0;
     static public int maxMagnetism = 20;
+    static public bool isTalking = false;
 }
