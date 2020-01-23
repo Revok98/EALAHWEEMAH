@@ -26,6 +26,7 @@ public class TryAgain : MonoBehaviour
         if (Container.time <= 1)
         {
             SceneManager.LoadScene(beginningScene);
+            Container.time = 300f;
         }
         else
         {

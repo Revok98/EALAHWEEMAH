@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.0039957035, g: 0.00021792634, b: 0.000000051515347,
+  m_IndirectSpecularColor: {r: 0.003995701, g: 0.00021792622, b: 0.000000051515347,
     a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -46858,6 +46858,11 @@ PrefabInstance:
       propertyPath: mag
       value: 
       objectReference: {fileID: 2359892}
+    - target: {fileID: 4361162885758986527, guid: d7e28a61d772ab049ba0158f7699dcda,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6536313265041986027, guid: d7e28a61d772ab049ba0158f7699dcda,
         type: 3}
       propertyPath: m_Name

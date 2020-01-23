@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class Container 
 {
-    public static float time = 5f;
+    public static float time = 300f;
     public static string lastSceneName;
     public static bool timerStop = false;
     static public int health = 100;

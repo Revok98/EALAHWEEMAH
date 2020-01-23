@@ -59,7 +59,6 @@ public class DialogManager : MonoBehaviour {
             m_renderText.text = m_dialogToDisplay[0].text;
         } else
         {
-            Debug.Log("Hey");
             Container.timerStop = false;
             this.gameObject.SetActive(false);
         }
