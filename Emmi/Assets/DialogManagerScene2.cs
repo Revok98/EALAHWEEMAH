@@ -48,6 +48,11 @@ public class DialogManagerScene2 : MonoBehaviour
         if (m_dialogToDisplay.Count >0)
         {
             removetext = true;
+            if (m_dialogToDisplay[0].color[0] != 0)
+            {
+                Debug.Log(m_dialogToDisplay[0].color);
+                m_renderText.color = m_dialogToDisplay[0].color;
+            } 
             m_renderText.text = m_dialogToDisplay[0].text + "\n" + "<size=10><color=#FFA500>Appuyez sur espace pour continuer</color></size>";
         }
         else
