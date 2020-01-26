@@ -32,6 +32,7 @@ public class DialogManagerScene2 : MonoBehaviour
                 m_renderText.text = "";
             }
             this.gameObject.SetActive(true);
+            Container.isTalking = true;
         }
     }
 
@@ -41,6 +42,8 @@ public class DialogManagerScene2 : MonoBehaviour
 
         if (m_renderText == null)
         {
+            Container.isTalking = false;
+            Container.timerStop = false;
             this.gameObject.SetActive(false);
         }
 
@@ -58,6 +61,7 @@ public class DialogManagerScene2 : MonoBehaviour
         else
         {
             Container.timerStop = false;
+            Container.isTalking = false;
             this.gameObject.SetActive(false);
         }
 
